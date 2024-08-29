@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --light: #fff;
+  --green: #00e9af;
+  --light-70: #ffffffd4;
+  --light-50: #ffffff7b;
+  --light-10: #ffffff2d;
+  --dark: #161618;
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--green);
+}
+
+h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--green);
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--green);
+  font-weight: 600;
+  padding-right: .5rem;
+}
+
+/* container Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  padding: 1rem;
+
+  nav,
+  header,
+  section,
+  footer {
+    width: 100%;
+    max-width: 750px;
+  }
+}
+
+/* nav-bar Styles */
+nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-icon-box {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../images/icons/profile-icon.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.contact-box > a {
+  color: var(--green);
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+/* header Styles */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+header .profile-img {
+  width: 150px;
+  height: 150px;
+}
+
+header p {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* projects Styles */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.project-box {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project-img02,
+.project-img01 {
+  width: 150px;
+  height: 150px;
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-img01 {
+  background-image: url(../images/projects/cosmic-invasion.gif);
+}
+
+.project-img02 {
+  background-image: url(../images/projects/labirinto-jogo.png);
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: calc(100% - 150px);
+}
+
+/* footer Styles */
+
+footer > p {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 750px) {
+  .project-box {
+    flex-direction: column;
+  }
+
+  .project-text {
+    width: 100%;
+  }
+}
