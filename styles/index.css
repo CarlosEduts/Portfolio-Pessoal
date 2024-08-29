@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --light: #fff;
-  --green: #00e9af;
-  --light-70: #ffffffd4;
-  --light-50: #ffffff7b;
-  --light-10: #ffffff2d;
+  --light: #f6f6f6;
+  --background-light: #e2e2e2;
+  --blue: #00a3e9;
   --dark: #161618;
 }
 
@@ -19,6 +17,13 @@ html {
   box-sizing: border-box;
 }
 
+/* Estilo para o tema claro */
+.light-theme {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+/* Gobal Styles */
 body {
   background-color: var(--dark);
   color: var(--light);
@@ -27,15 +32,15 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  color: var(--green);
+  color: var(--blue);
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   text-decoration: underline;
   text-decoration-style: wavy;
-  text-decoration-color: var(--green);
+  text-decoration-color: var(--blue);
 }
 
 p {
@@ -45,9 +50,9 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--green);
+  color: var(--blue);
   font-weight: 600;
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }
 
 /* container Styles */
@@ -59,41 +64,12 @@ a {
   gap: 3.5rem;
   padding: 1rem;
 
-  nav,
   header,
   section,
   footer {
     width: 100%;
     max-width: 750px;
   }
-}
-
-/* nav-bar Styles */
-nav {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-icon-box {
-  display: flex;
-  align-items: center;
-}
-
-.profile-img {
-  width: 3rem;
-  height: 3rem;
-  background-image: url(../images/icons/profile-icon.jpg);
-  background-size: cover;
-  border-radius: 50%;
-  margin-right: 0.5rem;
-}
-
-.contact-box > a {
-  color: var(--green);
-  text-decoration: none;
-  font-size: 1.8rem;
 }
 
 /* header Styles */
@@ -103,11 +79,17 @@ header {
   align-items: center;
   gap: 1rem;
   text-align: center;
+  padding-top: 3rem;
 }
 
 header .profile-img {
   width: 150px;
   height: 150px;
+  background-image: url(../images/icons/profile-icon.jpg);
+  background-size: cover;
+  border-radius: 150px;
+  box-shadow: rgba(50, 50, 93, 0.35) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.4) 0px 30px 60px -30px;
 }
 
 header p {
@@ -115,8 +97,16 @@ header p {
   max-width: 500px;
 }
 
+.contact-box > a {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 1.9rem;
+  justify-content: center;
+}
+
 /* projects Styles */
-.projects {
+.projects,
+.project-text {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
@@ -135,6 +125,7 @@ header p {
   border-radius: 0.5rem;
   background-size: cover;
   background-position: center;
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
 }
 
 .project-img01 {
@@ -146,20 +137,21 @@ header p {
 }
 
 .project-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
   width: calc(100% - 150px);
 }
 
 /* footer Styles */
-
 footer > p {
   text-align: center;
   font-size: 0.8rem;
 }
 
+/* Responsividade para telas Pequenas */
 @media (max-width: 750px) {
+  html {
+    font-size: 14px;
+  }
+
   .project-box {
     flex-direction: column;
   }
