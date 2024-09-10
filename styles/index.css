@@ -49,7 +49,6 @@ p {
 }
 
 a {
-  text-decoration: none;
   color: var(--blue);
   font-weight: 600;
   padding-right: 0.5rem;
@@ -85,7 +84,7 @@ header {
 header .profile-img {
   width: 150px;
   height: 150px;
-  background-image: url(../images/icons/profile-icon.jpg);
+  background-image: url(../public/icons/profile-icon.jpg);
   background-size: cover;
   border-radius: 150px;
   box-shadow: rgba(50, 50, 93, 0.35) 0px 50px 100px -20px,
@@ -100,8 +99,12 @@ header p {
 .contact-box > a {
   color: var(--blue);
   text-decoration: none;
-  font-size: 1.9rem;
   justify-content: center;
+}
+
+.contact-box > a > svg {
+  width: 1.9rem;
+  height: 1.9rem;
 }
 
 /* projects Styles */
@@ -129,11 +132,11 @@ header p {
 }
 
 .project-img01 {
-  background-image: url(../images/projects/cosmic-invasion.gif);
+  background-image: url(../public/projects/cosmic-invasion.gif);
 }
 
 .project-img02 {
-  background-image: url(../images/projects/labirinto-jogo.png);
+  background-image: url(../public/projects/labirinto-jogo.png);
 }
 
 .project-text {
