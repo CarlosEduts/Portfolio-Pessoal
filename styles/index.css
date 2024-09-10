@@ -84,7 +84,7 @@ header {
 header .profile-img {
   width: 150px;
   height: 150px;
-  background-image: url(../public/icons/profile-icon.jpg);
+  background-image: url(../images/icons/profile-icon.jpg);
   background-size: cover;
   border-radius: 150px;
   box-shadow: rgba(50, 50, 93, 0.35) 0px 50px 100px -20px,
@@ -132,11 +132,11 @@ header p {
 }
 
 .project-img01 {
-  background-image: url(../public/projects/cosmic-invasion.gif);
+  background-image: url(../images/projects/cosmic-invasion.gif);
 }
 
 .project-img02 {
-  background-image: url(../public/projects/labirinto-jogo.png);
+  background-image: url(../images/projects/labirinto-jogo.png);
 }
 
 .project-text {
