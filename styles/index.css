@@ -2,9 +2,16 @@
 
 :root {
   --light: #f6f6f6;
-  --background-light: #e2e2e2;
   --blue: #00a3e9;
   --dark: #161618;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --light: #161618;
+    --blue: #00a3e9;
+    --dark: #f6f6f6;
+  }
 }
 
 html {
@@ -15,12 +22,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* Estilo para o tema claro */
-.light-theme {
-  background-color: var(--light);
-  color: var(--dark);
 }
 
 /* Gobal Styles */
