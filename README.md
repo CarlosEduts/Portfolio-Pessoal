@@ -1,4 +1,4 @@
-# Portfólio de Carlos
+# <img src="./images/icons/page-icon.png" width=23 title="Logo da página"/> Portfólio de Carlos
 
 ### 👋 Olá!
 
