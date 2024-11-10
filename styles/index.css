@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   --light: #f6f6f6;
+  --light-90: rgba(246, 246, 246, 0.8);
   --blue: #00a3e9;
   --dark: #161618;
 }
@@ -9,6 +9,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --light: #161618;
+    --light-90: rgba(22, 22, 24, 0.8);
     --blue: #0071a3;
     --dark: #f6f6f6;
   }
@@ -28,7 +29,7 @@ html {
 body {
   background-color: var(--dark);
   color: var(--light);
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -45,7 +46,7 @@ h2 {
 }
 
 p {
-  opacity: 0.8;
+  color: var(--light-90);
   font-size: 1.1rem;
   line-height: 1.8rem;
   letter-spacing: 0.5px;
@@ -114,8 +115,8 @@ header p {
   height: 1.9rem;
 }
 
-/* about-me Styles */
-.about-me a {
+/* more-about-me Styles */
+.more-about-me a {
   padding: 0;
 }
 
