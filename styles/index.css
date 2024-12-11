@@ -11,7 +11,7 @@
   :root {
     --light: #161618;
     --light-90: rgba(22, 22, 24, 0.8);
-    --grey: #3232320f;
+    --grey: #32323207;
     --blue: #0071a3;
     --dark: #f6f6f6;
   }
@@ -21,7 +21,7 @@
 html.dark-mode {
   --light: #161618;
   --light-90: rgba(22, 22, 24, 0.8);
-  --grey: #3232320f;
+  --grey: #32323207;
   --blue: #0071a3;
   --dark: #f6f6f6;
 }
