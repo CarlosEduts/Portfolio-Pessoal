@@ -2,6 +2,7 @@
 :root {
   --light: #f6f6f6;
   --light-90: rgba(246, 246, 246, 0.8);
+  --grey: #32323257;
   --blue: #00a3e9;
   --dark: #161618;
 }
@@ -10,6 +11,7 @@
   :root {
     --light: #161618;
     --light-90: rgba(22, 22, 24, 0.8);
+    --grey: #3232320f;
     --blue: #0071a3;
     --dark: #f6f6f6;
   }
@@ -19,6 +21,7 @@
 html.dark-mode {
   --light: #161618;
   --light-90: rgba(22, 22, 24, 0.8);
+  --grey: #3232320f;
   --blue: #0071a3;
   --dark: #f6f6f6;
 }
@@ -26,6 +29,7 @@ html.dark-mode {
 html.light-mode {
   --light: #f6f6f6;
   --light-90: rgba(246, 246, 246, 0.8);
+  --grey: #32323257;
   --blue: #00a3e9;
   --dark: #161618;
 }
@@ -64,7 +68,7 @@ h2 {
 p {
   color: var(--light-90);
   font-size: 1.1rem;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
   letter-spacing: 0.5px;
 }
 
@@ -105,8 +109,8 @@ header {
 }
 
 header .profile-img {
-  min-width: 150px;
-  min-height: 150px;
+  min-width: 140px;
+  min-height: 140px;
   background-image: url(../images/icons/profile-icon.jpg);
   background-size: cover;
   border-radius: 150px;
@@ -168,7 +172,12 @@ header p {
 }
 
 .project-box {
+  border-radius: 0.5rem;
   display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  box-shadow: var(--blue) 5px 5px;
+  padding: 1rem;
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -176,12 +185,11 @@ header p {
 .project-img03,
 .project-img02,
 .project-img01 {
-  width: 150px;
-  height: 150px;
-  border-radius: 0.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 99rem;
   background-size: cover;
   background-position: center;
-  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
 }
 
 .project-img01 {
@@ -200,7 +208,9 @@ header p {
 }
 
 .project-text {
-  width: calc(100% - 150px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /* footer Styles */
@@ -213,14 +223,6 @@ footer > p {
 @media (max-width: 750px) {
   html {
     font-size: 14px;
-  }
-
-  .project-img03,
-  .project-img02,
-  .project-img01 {
-    max-width: 50px;
-    height: 50px;
-    border-radius: 0.3rem;
   }
 
   .project-text {
