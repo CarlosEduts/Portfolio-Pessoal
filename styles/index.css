@@ -131,6 +131,7 @@ header p {
 }
 
 .page-actions-box > button {
+  margin-top: -0.2rem; /* Alinhar com os outros ícones */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,8 +149,8 @@ header p {
 
 .page-actions-box > button > svg,
 .contact-box > a > svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .contact-box > a {
@@ -181,6 +182,7 @@ header p {
   margin-bottom: 2rem;
 }
 
+.project-img04,
 .project-img03,
 .project-img02,
 .project-img01 {
@@ -204,6 +206,10 @@ header p {
   background-image: url(../images/projects/DevKiit.png);
   background-size: 95%;
   background-repeat: no-repeat;
+}
+
+.project-img04 {
+  background-image: url(../images/projects/Linkioo.png);
 }
 
 .project-text {
