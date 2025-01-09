@@ -1,37 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
-  --light: #edf7fb;
-  --light-90: rgba(246, 246, 246, 0.8);
-  --grey: #6a7c8d25;
-  --blue: #00a3e9;
-  --dark: #0a141e;
+  --foreground: #0d1b2a;
+  --foreground-90: rgba(22, 22, 24, 0.8);
+  --grey: #b2c7d81d;
+  --blue: #0071a3;
+  --background: #f4fbff;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --light: #0d1b2a;
-    --light-90: rgba(22, 22, 24, 0.8);
-    --grey: #b2c7d81d;
-    --blue: #0071a3;
-    --dark: #f4fbff;
+    --foreground: #edf7fb;
+    --foreground-90: rgba(246, 246, 246, 0.8);
+    --grey: #6a7c8d25;
+    --blue: #00a3e9;
+    --background: #0a141e;
   }
 }
 
 /* Classe para alteração de cor por meio do JavaScript */
 html.dark-mode {
-  --light: #0d1b2a;
-  --light-90: rgba(22, 22, 24, 0.8);
-  --grey: #b2c7d81d;
-  --blue: #0071a3;
-  --dark: #f4fbff;
+  --foreground: #edf7fb;
+  --foreground-90: rgba(246, 246, 246, 0.8);
+  --grey: #6a7c8d25;
+  --blue: #00a3e9;
+  --background: #0a141e;
 }
 
 html.light-mode {
-  --light: #edf7fb;
-  --light-90: rgba(246, 246, 246, 0.8);
-  --grey: #6a7c8d25;
-  --blue: #00a3e9;
-  --dark: #0a141e;
+  --foreground: #0d1b2a;
+  --foreground-90: rgba(22, 22, 24, 0.8);
+  --grey: #b2c7d81d;
+  --blue: #0071a3;
+  --background: #f4fbff;
 }
 
 /* Gobal Styles */
@@ -46,8 +46,8 @@ html {
 }
 
 body {
-  background-color: var(--dark);
-  color: var(--light);
+  background-color: var(--background);
+  color: var(--foreground);
   font-family: "Roboto", sans-serif;
   transition: all 500ms;
 }
@@ -66,14 +66,10 @@ h2 {
 }
 
 p {
-  color: var(--light-90);
+  color: var(--foreground-90);
   font-size: 1.1rem;
   line-height: 1.7rem;
   letter-spacing: 0.5px;
-}
-
-strong {
-  opacity: 0.9;
 }
 
 a {
@@ -81,6 +77,11 @@ a {
   font-weight: 600;
   padding-right: 0.5rem;
   text-decoration: none;
+  transition: all 200ms;
+}
+
+a:hover {
+  opacity: 0.4;
 }
 
 /* container Styles */
@@ -100,12 +101,49 @@ a {
   }
 }
 
+/* Primary header-actions */
+.header-actions {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--grey);
+  backdrop-filter: blur(10px);
+}
+
+.header-actions > div {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.language-toggle {
+  font-size: 1rem;
+  background-color: var(--grey);
+  padding: 0.3rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  border-radius: 99px;
+}
+
+.language-toggle > a {
+  padding: 0;
+}
+
 /* header Styles */
 header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-top: 3rem;
+  padding-top: calc(2rem + 70px);
 }
 
 header .profile-img {
@@ -130,14 +168,20 @@ header p {
   margin-top: 0.2rem;
 }
 
-.page-actions-box > button {
-  margin-top: -0.2rem; /* Alinhar com os outros ícones */
+.page-actions-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem;
-  border-radius: 99px;
-  border: 2px solid var(--blue);
+  gap: 0.2rem;
+}
+
+.page-actions-box > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem;
+  padding-right: 0.3rem;
+  border: none;
   background: none;
   color: var(--blue);
   transition: all 400ms;
@@ -149,8 +193,8 @@ header p {
 
 .page-actions-box > button > svg,
 .contact-box > a > svg {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .contact-box > a {
